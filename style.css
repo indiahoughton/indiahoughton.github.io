@@ -1,356 +1,348 @@
-/* ==========================================================================
-   Base Styles
-   ========================================================================== */
-
 .landing-page {
-    background-color: #2727c1;
-    display: flex;
-    width: 100%;
-    min-height: 100vh;
-    flex-direction: column;
-    font-family: "Karla", Helvetica;
-    position: relative;
+  background-color: #2727c1;
+  /* background-image: url("img/landing-page-photo.jpg"); */
+
+  background-size: contain;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  font-family: "Karla", Helvetica;
 }
 
-/* ==========================================================================
-   Header / Navigation Bar
-   ========================================================================== */
-
-.title-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 26px;
-    height: 98px;
-    background-color: #fafaff;
-    border-bottom: 1px solid #000000;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+.landing-page .title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32 px;
+  background-color: #fafaff;
+  border-bottom: 1px solid #000;
+  position: sticky;
+  top: 0;
+  width: 100%;
 }
 
-.site-title {
-    font-family: "Ibarra Real Nova", Helvetica;
-    font-weight: 600;
-    color: #000000;
-    font-size: 32px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 35px;
-    margin: 0;
+.landing-page .overlap {
+  position: absolute;
+  width: 1165px;
+  height: 575px;
+  top: 911px;
+  left: 116px;
 }
 
-.main-nav {
-    display: flex;
-    gap: 58px;
-    align-items: center;
-    margin-right: 409px;
+.landing-page .overlap-group {
+  position: absolute;
+  width: 1162px;
+  height: 575px;
+  top: 0;
+  left: 0;
 }
 
-.nav-link {
-    font-family: "Quattrocento", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 23px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-    text-decoration: none;
-    transition: font-weight 0.2s ease;
+.landing-page .stanford-headshot {
+  position: absolute;
+  width: 594px;
+  height: 575px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
 }
 
-.nav-link.active,
-.nav-link:hover {
-    font-weight: 700;
+.landing-page .text-wrapper {
+  position: absolute;
+  width: 672px;
+  top: 222px; 
+  left: 490px;
+  font-family: var(--oter-title-option-font-family);
+  font-weight: var(--oter-title-option-font-weight);
+  color: #000000;
+  font-size: var(--oter-title-option-font-size);
+  text-align: right;
+  letter-spacing: var(--oter-title-option-letter-spacing);
+  line-height: var(--oter-title-option-line-height);
+  font-style: var(--oter-title-option-font-style);
 }
 
-/* ==========================================================================
-   Hero Section
-   ========================================================================== */
-
-.hero-section {
-    position: relative;
-    width: 100%;
-    height: 769px;
-    background-image: url("landing-page-photo.jpg");
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.landing-page .text-wrapper-2 {
+  position: absolute;
+  width: 144px;
+  top: 374px;
+  left: 1021px;
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  color: #000000;
+  font-size: var(--heading-font-size);
+  text-align: center;
+  letter-spacing: var(--heading-letter-spacing);
+  line-height: var(--heading-line-height);
+  text-decoration: underline;
+  white-space: nowrap;
+  font-style: var(--heading-font-style);
 }
 
-.hero-content {
-    position: relative;
-    top: 130px;
+.landing-page .instagram-icon {
+  position: absolute;
+  width: 37px;
+  height: 37px;
+  top: 143px;
+  left: 1019px;
+  background-color: #fafaff;
 }
 
-.cta-button {
-    display: inline-block;
-    padding: 7px 14px;
-    background-color: rgba(250, 250, 255, 0.85);
-    border-radius: 10px;
-    font-family: "Quattrocento", Helvetica;
-    font-weight: 400;
-    color: #2e2e2e;
-    font-size: 16px;
-    text-align: center;
-    letter-spacing: 0.32px;
-    line-height: normal;
-    text-decoration: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+.landing-page .img {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  top: 2px;
+  left: 2px;
+  object-fit: cover;
 }
 
-.cta-button:hover {
-    background-color: rgba(250, 250, 255, 0.95);
-    transform: translateY(-2px);
+.landing-page .linkedin-icon {
+  position: absolute;
+  width: 37px;
+  height: 37px;
+  top: 143px;
+  left: 1070px;
+  background-color: #fafaff;
 }
 
-/* ==========================================================================
-   About Section
-   ========================================================================== */
-
-.about-section {
-    position: relative;
-    padding: 44px 116px 140px;
-    background-color: #2727c1;
+.landing-page .youtube-icon {
+  position: absolute;
+  width: 37px;
+  height: 37px;
+  top: 143px;
+  left: 1121px;
+  background-color: #fafaff;
 }
 
-.about-content {
-    display: flex;
-    gap: 0;
-    align-items: center;
-    max-width: 1162px;
+.landing-page .button-effect-wrapper {
+  position: absolute;
+  background-image: url("img/landing-page-photo.jpg");
+  width: 1440px;
+  height: 769px;
+  top: 98px;
+  left: 0;
+  /* background-image: url(./img/e9137e18-dd4e-491c-ac5f-70cfbb20be2c.png); */
+  background-size: 100% 100%;
 }
 
-.profile-photo {
-    width: 594px;
-    height: 575px;
-    object-fit: cover;
-    flex-shrink: 0;
+.landing-page .button-effect {
+  position: relative;
+  width: 154px;
+  height: 36px;
+  top: 454px;
+  left: 643px;
+  box-shadow: 0px 4px 4px #00000040;
 }
 
-.about-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding-left: 0;
-    position: relative;
+.landing-page .buttons {
+  position: relative;
+  height: 36px;
+  background-color: #fafaffd9;
+  border-radius: 10px;
+  border: 0px none;
 }
 
-.tagline {
-    font-family: var(--oter-title-option-font-family);
-    font-weight: var(--oter-title-option-font-weight);
-    color: #000000;
-    font-size: var(--oter-title-option-font-size);
-    text-align: right;
-    letter-spacing: var(--oter-title-option-letter-spacing);
-    line-height: var(--oter-title-option-line-height);
-    font-style: var(--oter-title-option-font-style);
-    margin: 79px 0 0 0;
-    max-width: 672px;
+.landing-page .primary {
+  position: absolute;
+  width: 127px;
+  height: 21px;
+  top: 7px;
+  left: 14px;
+  font-family: "Quattrocento", Helvetica;
+  font-weight: 400;
+  color: #2e2e2e;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.32px;
+  line-height: normal;
 }
 
-.social-links {
-    display: flex;
-    gap: 14px;
-    margin-top: -79px;
-    margin-bottom: 51px;
+.landing-page .title-bar {
+  position: sticky;
+  width: 1440px;
+  height: 98px;
+  top: 0;
+  left: 0;
+  background-color: #fafaff;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #000000;
 }
 
-.social-links a {
-    display: block;
-    width: 37px;
-    height: 37px;
-    background-color: #fafaff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.landing-page .INDIA-HOUGHTON {
+  position:relative;
+  width: 216px;
+  height: 70px;
+  top: 17px;
+  left: 26px;
+  font-family: "Ibarra Real Nova", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 35px;
 }
 
-.social-links img {
-    width: 33px;
-    height: 33px;
-    object-fit: cover;
+.landing-page .home {
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  top: 38px;
+  left: 389px;
 }
 
-.wta-link {
-    font-family: var(--heading-font-family);
-    font-weight: var(--heading-font-weight);
-    color: #000000;
-    font-size: var(--heading-font-size);
-    text-align: center;
-    letter-spacing: var(--heading-letter-spacing);
-    line-height: var(--heading-line-height);
-    text-decoration: underline;
-    white-space: nowrap;
-    font-style: var(--heading-font-style);
-    margin-right: 3px;
+.landing-page .text-wrapper-3 {
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  top: -1px;
+  left: 0;
+  font-family: "Quattrocento-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 23px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-
-.footer {
-    background-color: #272733;
-    border-top: 1px solid #000000;
-    padding: 0;
-    margin-top: auto;
+.landing-page .tennis {
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  top: 38px;
+  left: 527px;
 }
 
-.footer-content {
-    padding: 30px 30px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+.landing-page .text-wrapper-4 {
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  top: -1px;
+  left: 0;
+  font-family: "Quattrocento", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 23px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
 }
 
-.footer-info {
-    flex-shrink: 0;
+.landing-page .media {
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  top: 38px;
+  left: 665px;
 }
 
-.footer-text {
-    font-family: "Quattrocento", Helvetica;
-    font-weight: 400;
-    color: #fafaff;
-    font-size: 16px;
-    letter-spacing: 0.32px;
-    line-height: 22px;
-    margin: 49px 0 0 0;
+.landing-page .music {
+  position: absolute;
+  width: 95px;
+  height: 30px;
+  top: 38px;
+  left: 803px;
 }
 
-.footer-brand {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.landing-page .text-wrapper-5 {
+  position: absolute;
+  width: 95px;
+  height: 30px;
+  top: -1px;
+  left: 0;
+  font-family: "Quattrocento", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 23px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
 }
 
-.footer-title {
-    font-family: "Ibarra Real Nova", Helvetica;
-    font-weight: 600;
-    color: #fafaff;
-    font-size: 32px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 35px;
-    white-space: nowrap;
-    margin-top: -11px;
+.landing-page .contact {
+  position: absolute;
+  width: 95px;
+  height: 30px;
+  top: 38px;
+  left: 956px;
 }
 
-.footer-social {
-    display: flex;
-    gap: 16px;
-    margin-top: 38px;
-    margin-left: 933px;
+.landing-page .footer {
+  position: absolute;
+  width: 1440px;
+  height: 151px;
+  top: 1606px;
+  left: 0;
+  background-color: #272733;
+  overflow: hidden;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
 }
 
-.footer-social a {
-    display: block;
+.landing-page .website-designed-by {
+  position: absolute;
+  width: 296px;
+  height: 54px;
+  top: 79px;
+  left: 30px;
+  font-family: "Quattrocento", Helvetica;
+  font-weight: 400;
+  color: #fafaff;
+  font-size: 16px;
+  letter-spacing: 0.32px;
+  line-height: 22px;
 }
 
-.footer-icon {
-    width: 37px;
-    height: 37px;
-    fill: white;
+.landing-page .rectangle {
+  position: absolute;
+  width: 1440px;
+  height: 63px;
+  top: 151px;
+  left: 0;
+  background-color: #262633;
 }
 
-.footer-icon.youtube-icon {
-    width: 48px;
+.landing-page .text-wrapper-6 {
+  position: absolute;
+  width: 370px;
+  height: 31px;
+  top: 19px;
+  left: 0;
+  font-family: "Ibarra Real Nova", Helvetica;
+  font-weight: 600;
+  color: #fafaff;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 35px;
+  white-space: nowrap;
 }
 
-/* Footer bottom bar */
-.footer::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 63px;
-    background-color: #262633;
-    margin-top: 58px;
+.landing-page .vector {
+  position: absolute;
+  width: 37px;
+  height: 37px;
+  top: 57px;
+  left: 1259px;
 }
 
-/* ==========================================================================
-   Responsive Design
-   ========================================================================== */
-
-@media (max-width: 1440px) {
-    .main-nav {
-        margin-right: 30px;
-    }
-    
-    .about-section {
-        padding: 44px 60px 140px;
-    }
+.landing-page .vector-2 {
+  width: 48px;
+  left: 1365px;
+  position: absolute;
+  height: 37px;
+  top: 57px;
 }
 
-@media (max-width: 1200px) {
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .about-text {
-        align-items: center;
-        padding-left: 0;
-        margin-top: 30px;
-    }
-    
-    .tagline {
-        text-align: center;
-        margin: 30px 0;
-    }
-    
-    .social-links {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    
-    .profile-photo {
-        width: 100%;
-        max-width: 594px;
-        height: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .title-bar {
-        flex-direction: column;
-        height: auto;
-        padding: 20px;
-    }
-    
-    .main-nav {
-        margin-right: 0;
-        margin-top: 20px;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .nav-link {
-        font-size: 18px;
-    }
-    
-    .hero-section {
-        height: 500px;
-    }
-    
-    .about-section {
-        padding: 30px 20px;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .footer-social {
-        margin-left: 0;
-        margin-top: 20px;
-    }
+.landing-page .vector-3 {
+  width: 37px;
+  left: 1312px;
+  position: absolute;
+  height: 37px;
+  top: 57px;
 }
