@@ -1,6 +1,6 @@
 .landing-page {
-  background-color: #2727c1;
-  /* background-image: url("img/landing-page-photo.jpg"); */
+/*   background-color: #2727c1; */
+  background-image: url("img/landing-page-photo.jpg");
 
   background-size: contain;
   display: flex;
