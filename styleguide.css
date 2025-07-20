@@ -1,0 +1,27 @@
+:root {
+  --heading-font-family: "Karla", Helvetica;
+  --heading-font-weight: 500;
+  --heading-font-size: 23px;
+  --heading-letter-spacing: 0px;
+  --heading-line-height: normal;
+  --heading-font-style: normal;
+  --body-font-family: "Quattrocento", Helvetica;
+  --body-font-weight: 400;
+  --body-font-size: 16px;
+  --body-letter-spacing: 0.32px;
+  --body-line-height: normal;
+  --body-font-style: normal;
+  --titles-font-family: "Karla", Helvetica;
+  --titles-font-weight: 500;
+  --titles-font-size: 50px;
+  --titles-letter-spacing: 0px;
+  --titles-line-height: normal;
+  --titles-font-style: normal;
+  --oter-title-option-font-family: "Quattrocento", Helvetica;
+  --oter-title-option-font-weight: 700;
+  --oter-title-option-font-size: 50px;
+  --oter-title-option-letter-spacing: 2px;
+  --oter-title-option-line-height: normal;
+  --oter-title-option-font-style: normal;
+}
+
