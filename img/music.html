@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Compositions</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body class="music-page">
+    <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="index.html" id="navbar__logo">INDIA HOUGHTON</a>
+      <div class="navbar__toogle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item"><a href="index.html" class="navbar__links">Home</a></li>
+        <li class="navbar__item"><a href="tennis.html" class="navbar__links">Tennis</a></li>
+        <li class="navbar__item"><a href="music.html" class="navbar__links active">Music</a></li>
+        <li class="navbar__item"><a href="contact.html" class="navbar__links">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Music Compositions -->
+   <section class="music__content">
+    <div class="composition__container">
+      <h1 class="music__compositions">Original Compositions</h1>
+     
+     <div class="composition__track">
+        <p class="composition__song" onclick="togglePlay('audio1', this)">When The Wind Blows</p>
+        <audio id="audio1" src="audio/when the wind blows audio.m4a"></audio>
+    </div>
+
+    <div class="composition__track">
+      <p class="composition__song" onclick="togglePlay('audio3', this)">Sunsets in Paris</p>
+      <audio id="audio3" src="audio/sunsets-in-paris.mp4"></audio>
+    </div>
+
+     <div class="composition__track">
+      <p class="composition__song" onclick="togglePlay('audio2', this)">Epic Movie Theme Song</p>
+      <audio id="audio2" src="audio/epic-theme-song.mp4"></audio>
+    </div>
+     
+     <h3 class="original__scores">Original Scores</h3>
+
+     <video class="music__video" width="560" height="315" controls>
+      <source src="video/CitizenKane project.mp4" type="video/mp4">
+     </video>
+
+     <p class="citizen-kane-description">Rescore of Orson Welles' Citizen Kane</p>
+    </div>
+
+    <div class="music__headshot">
+      <img src="img/je-headshot.JPG" alt="JE Headshot" />
+    </div>
+   </section>
+
+   <!-- Footer Section -->
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__social">
+      <a href="https://www.instagram.com/indiahoughton/" target="_blank"  rel="noopener noreferrer" ><img src="img/gram100.png"  alt="Instagram" /></a>
+        <a href="https://www.linkedin.com/in/india-houghton/" target="_blank"  rel="noopener noreferrer" ><img src="img/linkedin100.png"  alt="LinkedIn" /></a>
+        <a href="https://www.youtube.com/@indiahoughton16" target="_blank"  rel="noopener noreferrer"><img src="img/youtube100.png" alt="YouTube" /></a>
+    </div>
+    <div class="footer__text">
+      <p>Website designed by India Houghton</p>
+       <p>© 2025 | All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  let currentAudio = null;
+
+  function togglePlay(id, element) {
+    const audio = document.getElementById(id);
+
+    // Pause current audio if it's playing and not the clicked one
+    if (currentAudio && currentAudio !== audio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+      const prevActive = document.querySelector('.composition__song.playing');
+      if (prevActive) prevActive.classList.remove('playing');
+    }
+
+    if (audio.paused) {
+      audio.play();
+      element.classList.add('playing');
+      currentAudio = audio;
+    } else {
+      audio.pause();
+      element.classList.remove('playing');
+      currentAudio = null;
+    }
+  }
+  </script>
+
+</body>
+</html>
