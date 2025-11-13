@@ -273,14 +273,15 @@
 .features__list {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 15px;
 }
 
 .feature__row {
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
+  padding-top: 10px;
 }
 
 .feature__image img {
@@ -352,7 +353,7 @@
 .article__container {
   max-width: 800px;
   margin: 4rem auto;
-  padding: 0 1rem;
+  padding: 20px 20px;
   line-height: 1.7;
   color: #000000;
   font-family: Georgia, 'Times New Roman', serif;
