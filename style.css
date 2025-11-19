@@ -472,55 +472,102 @@ body {
   margin: 20px 40px;
 }
 
-/* Sponsor Section */
-.sponsors__section {
-  padding: 20px 40px;
-  background-color: #fafaff;;
+/* YouTube Vlogs Section */
+.youtube-vlogs {
+  padding: 30px 40px;
+  background-color: #fafaff;
   text-align: center;
+}
+
+.youtube-vlogs__title {
+  font-size: 23px;
+  font-weight: bold;
+  font-family: "Karla", sans-serif;
+  margin-bottom: 20px;
+}
+
+.youtube-vlogs__grid {
+  display: flex;
+  flex-wrap: nowrap;        /* keep in one horizontal line */
+  justify-content: center;  /* center row horizontally */
+  align-items: flex-start;
+  gap: 30px;                /* spacing between items */
+  overflow-x: auto;         /* allow horizontal scroll on small screens */
+  padding: 10px 0;
+}
+
+.youtube-vlog__item {
+  flex: 0 0 auto;           /* prevent shrinking */
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+
+.youtube-vlog__item img {
+  width: 400px;             /* thumbnail size */
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.youtube-vlog__item img:hover {
+  transform: scale(1.03);
+  opacity: 0.8;
+}
+
+.youtube-vlog__item p {
+  font-family: "Quattrocento", Helvetica;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* Sponsors Section */
+.sponsors__section {
+    padding: 20px;
+    background-color: #fafaff;
+    text-align: center;
 }
 
 .sponsors__title {
-  font-size: 23px;
-  font-weight: bold;
-  margin-bottom: 40px;
-  font-family:"Karla", sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: "Karla", sans-serif;
+    margin-bottom: 20px;
 }
 
-.sponsors__grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  padding: 0 20px;
-  gap: 40px;
+/* Make all logos in one line, scrollable on small screens */
+.sponsors__row {
+    display: flex;
+    flex-wrap: nowrap;          /* no wrapping */
+    justify-content: center;    /* center the row */
+    gap: 40px;                  /* space between logos */
+    overflow-x: auto;           /* allow horizontal scroll on small screens */
+    padding: 10px 0;
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
 }
 
 .sponsor__item {
-  flex: 1 1 200px;
-  max-width: 300px;
-  text-align: center;
+    flex: 0 0 auto;             /* don't grow or shrink */
+    text-align: center;
 }
 
 .sponsor__item img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-  margin-bottom: 40px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
+    max-width: 120px;           /* smaller logos */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .sponsor__item img:hover {
-  opacity: 0.7;
-  transform: scale(1.02)
+    opacity: 0.7;
+    transform: scale(1.02);
 }
 
 .sponsor__item p {
-  font-family: "Quattrocento", Helvetica;
-  font-size: 15px;
-  line-height: 1.4;
-  color: #000;
-  margin-bottom: 40px;
+    font-family: "Quattrocento", Helvetica;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
 /* Action Images */
@@ -554,14 +601,12 @@ body {
   height: 450px;
   object-fit:  cover;
   margin-bottom: 10px;
-  filter:grayscale(100%);
   transition: filter 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
 
 .action__item img:hover {
   transform: scale(1.01);
-  filter: grayscale(0%);
 }
 
 .action__item {
